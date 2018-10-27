@@ -1,7 +1,5 @@
 from templates import app
 
-#app.debug = True
+#Load this config object for development mode
 app.config.from_object('configurations.DevelopmentConfig')
 app.run()
-
-

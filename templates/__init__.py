@@ -1,9 +1,8 @@
 from flask import Flask
-
-
 app = Flask(__name__,
-	static_folder = './static/dist',
-	template_folder="./static")
+ 	static_folder = './public',
+ 	template_folder="./static")
 
-import templates.hello.views
-
+from templates.hello.views import hello_blueprint
+# register the blueprints
+app.register_blueprint(hello_blueprint)
